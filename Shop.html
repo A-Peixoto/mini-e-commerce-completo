@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Imagens/image-removebg-preview (2).png">
+    <title>Shop</title>
+</head>
+
+
+<body>
+
+<div id="carrinho" class="carrinho">
+    <h2>Seu Carrinho</h2>
+
+    <div id="lista-carrinho"></div>
+
+<div class="total">
+    Total: R$ <span id="total-carrinho">0.00</span>
+</div>
+
+<button onclick="comprar()">Comprar</button>
+
+    <button onclick="fecharCarrinho()">Fechar</button>
+</div>
+
+<header>
+
+    <div class="logo">
+        <img src="Imagens/image-removebg-preview (2).png" alt="Logo">
+    </div>
+
+    <div class="search">
+        <input type="text" placeholder="Pesquisar produtos...">
+    </div>
+
+    <div class="icons">
+    <i class="fa-solid fa-cart-shopping cart-icon" onclick="abrirCarrinho()">
+    <span id="cart-count">0</span>
+    </i>
+    <i class="fa-solid fa-user"></i>
+</div>
+</header>
+
+<nav>
+    <a href="#">Promo Nvidia</a>
+    <a href="#">Promo AMD</a>
+    <a href="#">Promo Intel</a>
+    <a href="#">PC Gamer</a>
+</nav>
+
+
+
+    <section class="banner">
+
+    <img class="passar ativo" src="Imagens/Banner_AMD.jpg">
+    <img class="passar" src="Imagens/Banner_Nintendo1.webp">
+    <img class="passar" src="Imagens/Banner_Nvidea.jpg">
+
+    <div class="indicadores">
+        <span class="dot ativo-dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+
+</section>
+
+<section class="produtos">
+
+    <div class="produto">
+        <img src="Imagens/images.jpg">
+        <h3>SSD Sata 1TB WD Blue SA510</h3>
+        <p>R$ 250,00</p>
+        <button onclick="addCarrinho('SSD Sata 1TB WD Blue SA510', 250.00)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="produto">
+        <img src="Imagens/71oQKP2gD6L.jpg">
+        <h3>GT 1030 EVGA</h3>
+        <p>R$ 1299,99</p>
+        <button onclick="addCarrinho('GT 1030 EVGA', 1299.99)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="produto">
+        <img src="Imagens/processadorRYZEN9x3d_Produtos.webp">
+        <h3>Ryzen 9 9950x3D</h3>
+        <p>R$ 3489,99</p>
+        <button onclick="addCarrinho('Ryzen 9 9950x3D', 3489.99)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="produto">
+        <img src="Imagens/PS3_Produtos.webp">
+        <h3>Playstation 3</h3>
+        <p>R$ 1099,99</p>
+        <button onclick="addCarrinho('Playstation 3', 1099.99)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="produto">
+        <img src="Imagens/PS4_Produtos.webp">
+        <h3>Playstation 4</h3>
+        <p>R$ 2299,99</p>
+        <button onclick="addCarrinho('Playstation 4', 2299.99)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="produto">
+        <img src="Imagens/PS5_Produtos.webp">
+        <h3>Playstation 5</h3>
+        <p>R$ 3699,99</p>
+       <button onclick="addCarrinho('Playstation 5', 3699.99)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="produto">
+        <img src="Imagens/CamisaNeymar_Produtos.webp">
+        <h3>Camisa Neymar Autografada</h3>
+        <p>R$ 8299,99</p>
+        <button onclick="addCarrinho('Camisa Neymar Autografada', 8299.99)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="produto">
+        <img src="Imagens/PcGamer1_Produto.webp">
+        <h3>PC GAMER com RTX 5090</h3>
+        <p>R$ 24.999,99</p>
+       <button onclick="addCarrinho('PC GAMER com RTX 5090', 24.999)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="produto">
+        <img src="Imagens/ControleGamer_Produto.jpg">
+        <h3>Controle Gamer</h3>
+        <p>R$ 67,99</p>
+       <button onclick="addCarrinho('Controle Gamer', 67.99)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="produto">
+        <img src="Imagens/RTX3060_Produtos.jpg">
+        <h3>RTX 3060</h3>
+        <p>R$ 1499,99</p>
+       <button onclick="addCarrinho('RTX 3060', 1499.99)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="produto">
+        <img src="Imagens/NintendoSwich2_Produto.jpg">
+        <h3>Nintendo Swicht 2</h3>
+        <p>R$ 4199,99</p>
+       <button onclick="addCarrinho('Nintendo Swicht 2', 4199.99)">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="produto">
+        <img src="Imagens/PcGamer1_Produto.webp">
+        <h3>PC GAMER com RTX 2060</h3>
+        <p>R$ 3799,99</p>
+      <button onclick="addCarrinho('PC GAMER com RTX 2060', 3799.99)">Adicionar ao carrinho</button>
+    </div>
+
+</section>
+
+
+
+
+<script src="Shop.js"></script>
+</body>
+</html>
